@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&family=Montserrat&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #222831;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-bottom: 20px;
+}
+
+.container_foto {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    padding-top: 30px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.foto_img {
+    max-width: 100px;
+    border-radius: 0%;
+}
+
+
+.nombre{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 2rem;
+    font-family: "Montserrat";
+    color: #28ffbb;
+}
+.container_enlaces {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 20px;
+}
+
+.enlaces {
+    background-color: #393E46;
+    height: 20px;
+    min-width: 60%;
+    padding: 20px;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition-duration: 0.7s;
+    font-size: 1rem;
+    font-family: 'Fira Code', monospace;
+
+}
+
+.enlaces:hover{
+    background-color: #28ffbb;
+    color:#222831;
+    transition-duration: 0.7s;
+}
+
+.footer{
+    padding-top: 20px;
+    color: #878787;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.6rem;
+	text-align: center;
+
+}
+
+.link{
+	color: #28ffbb;
+	font-family: 'Fira Code', monospace;
+}
