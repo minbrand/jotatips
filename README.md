@@ -1,0 +1,1 @@
+jota tips raiz
