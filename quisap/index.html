@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1244028499537995');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1244028499537995&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Interativo</title>
+  <style>
+    :root {
+      --primary-color: #000;
+      --secondary-color: #f2f2f2;
+      --button-bg: #000;
+      --button-color: #fff;
+      --button-hover-bg: #333;
+      --progress-bg: #e0e0e0;
+      --progress-fill: #000;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--secondary-color);
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .progress {
+      width: 100%;
+      height: 8px;
+      background-color: var(--progress-bg);
+      border-radius: 4px;
+      margin: 20px 0;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      width: 0;
+      height: 100%;
+      background-color: var(--progress-fill);
+      transition: width 0.3s ease;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 10px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--button-bg);
+      color: var(--button-color);
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      width: 100%;
+    }
+
+    .btn:hover {
+      background-color: var(--button-hover-bg);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .emoji {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="emoji">☠️</div>
+    <div class="progress">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <section id="step1">
+      <h1><strong>Estamos quebrando várias casas chinesas</strong></h1>
+      <p>Fala tropa</p>
+      <p>Estamos precisando de pessoas pra nos ajudar com nosso esquema para burlar as casas chinesas e conseguir pegar um trocado delas.</p>
+      <p>Se realmente tiver interesse, clique no botão abaixo que vou falar como funciona. Se você concordar com tudo, aí me chama no WhatsApp.</p>
+      <h2><strong>Então leia até o final</strong></h2>
+      <p><strong>Não quero curioso me chamando</strong></p>
+      <button class="btn" onclick="nextStep('step1', 'step2', 33)">Saber mais</button>
+    </section>
+
+    <section id="step2" class="hidden">
+      <h1><strong>Como funciona</strong></h1>
+      <p>Estamos burlando algumas casas chinesas que estão sendo organizadas para serem lançadas.</p>
+      <p>As casas que trabalhamos nós já identificamos os erros no sistema.</p>
+      <p>Como o sistema antifraude deles é muito rigoroso, precisamos de pessoas para criar contas nessas casas.</p>
+      <p><strong>NÃO PRECISA FAZER O PRIMEIRO DEPÓSITO</strong></p>
+      <p>Você criará sua conta na casa que vamos te mandar e seguirá os passos que vamos mostrar.</p>
+      <button class="btn" onclick="nextStep('step2', 'step3', 66)">Até aqui eu entendi</button>
+    </section>
+
+    <section id="step3" class="hidden">
+      <h1><strong>Como vamos ganhar dinheiro</strong></h1>
+      <p>Depois de criar sua conta, você nos passará o acesso para instalarmos nosso robô na casa e burlar o sistema.</p>
+      <p>Em 30% dos casos, o robô pode não atingir o valor mínimo para saque. Você precisará completar o que faltar, solicitar o saque e nos repassar 35% do valor obtido.</p>
+      <p>Essas casas estão em fase de configuração, com travas de saque altas e baixos depósitos, cheias de erros que podemos aproveitar.</p>
+      <a class="btn" href="https://wa.me/5583994066143" target="_blank" onclick="fbq('track', 'Lead');">QUERO ENTRAR</a>
+    </section>
+  </div>
+
+  <script>
+    function nextStep(current, next, progress) {
+      document.getElementById(current).classList.add('hidden');
+      document.getElementById(next).classList.remove('hidden');
+      document.getElementById('progressBar').style.width = progress + '%';
+    }
+  </script>
+</body>
+</html>
